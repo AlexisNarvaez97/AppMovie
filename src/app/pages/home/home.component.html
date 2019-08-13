@@ -1,0 +1,23 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">PeliculasAPP</h1>
+    <p class="lead">Esto es una aplicacion de peliculas.</p>
+  </div>
+</div>
+
+
+
+<div class="container">
+
+
+  <!-- Se añade el decorador con el nombre que se recibe en el ts y se pasa como parametro el array o la data que se desea mandar -->
+
+  <!-- Si la propiedad se manda esatica no es necesario que vaya entre corchetes. -->
+  <!-- Pipe slice solo mandar 6 objetos. -->
+  <app-galeria [peliculas]="cartelera | slice:0:6" titulo="Peliculas en cartelera"></app-galeria>
+
+  <app-galeria [peliculas]="populares | slice:0:6" titulo="Populares"></app-galeria>
+
+  <app-galeria [peliculas]="popularesNinos | slice:0:6" titulo="Populares Niños"></app-galeria>
+
+</div>
